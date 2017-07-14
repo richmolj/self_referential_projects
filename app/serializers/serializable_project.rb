@@ -3,7 +3,9 @@
 class SerializableProject < JSONAPI::Serializable::Resource
   type :projects
 
-  has_many :subprojects, class: 'SerializableSubproject'
+  attribute :name
+
+  has_many :subprojects
 
 
   # Add attributes here to ensure they get rendered, .e.g.

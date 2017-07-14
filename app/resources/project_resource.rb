@@ -9,5 +9,5 @@ class ProjectResource < ApplicationResource
   has_many :subprojects,
     scope: -> { Project.all },
     foreign_key: :superproject_id,
-    resource: SubprojectResource
+    resource: ProjectResource
 end
